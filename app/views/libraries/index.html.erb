@@ -1,0 +1,9 @@
+<h1>Lista de Publicaciones</h1>
+  <div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default"><%= link_to "Añadir Publicación", new_library_path %></button>
+  </div>
+
+    <% @library.each do |library| %>
+      <h2><%= link_to library.title, library_path(library) %></h2>
+      <h3><%= library.author %></h3>
+    <% end %>

@@ -1,0 +1,10 @@
+<h3><%= @library.title %></h3>
+<h4><%= @library.author %></h4>
+<p><h5><%= @library.description %></h5></p>
+
+
+<div class="btn-group" role="group" aria-label="...">
+  <button type="button" class="btn btn-default"><%= link_to "Editar Publicación", edit_library_path(@library) %></button>
+  <button type="button" class="btn btn-default"><%= link_to "Eliminar Publicación", library_path(@library), method: :delete %></button>
+  <button type="button" class="btn btn-default"><%= link_to "Regresar al Listado", root_path %></button>
+</div>
